@@ -9,7 +9,7 @@ export default function Navbar({filters, filter, onFilterChange}) {
 
   let onIndex =0;
 
-  filters.map((item,index) => {item === filter? onIndex = onIndex+index : onIndex = onIndex});
+  filters.map((item,index) => {return item == filter? onIndex = onIndex+index : onIndex});
 
   return (
     <header className={styles.header}>
@@ -20,7 +20,7 @@ export default function Navbar({filters, filter, onFilterChange}) {
       <ul>
         {filters.map((item,index)=>{
           return (
-            <li key={index} className={index==onIndex? styles.on :''}>
+            <li key={index} className={index == onIndex? styles.on :''}>
               <button onClick={()=>{onFilterChange(item)}}>
                 {item}
               </button>

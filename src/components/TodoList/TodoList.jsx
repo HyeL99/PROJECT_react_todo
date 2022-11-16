@@ -55,7 +55,7 @@ const getFilteredItems = (todos, filter) => {
   if(filter === 'all') {
     return todos;
   }
-  return todos.filter((item) => item.status == filter)
+  return todos.filter((item) => item.status === filter)
 }
 
 // localStorage에 저장된 todos를 가져와서 오브젝트형식으로 반환,

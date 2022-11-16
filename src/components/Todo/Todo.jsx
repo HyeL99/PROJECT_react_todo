@@ -12,8 +12,8 @@ const Todo = ({item, onUpdate, onDelete}) => {
   const handleDelete = () => onDelete(item);
 
   return (
-    <li className={`${styles.todo} ${item.status=='active'? styles.active:styles.completed}`}>
-      <input type="checkbox" id={`item@${item.id}`} checked={ item.status=='completed'?'checked':''} onChange={handleChange}/>
+    <li className={`${styles.todo} ${item.status === 'active'? styles.active:styles.completed}`}>
+      <input type="checkbox" id={`item@${item.id}`} checked={ item.status === 'completed'?'checked':''} onChange={handleChange}/>
       <label htmlFor={`item@${item.id}`}>{item.text}</label>
       <button onClick={handleDelete}><GrTrash /></button>
     </li>
